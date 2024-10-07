@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game List</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <h1>Choose a Game</h1>
+    </header>
+
+    <div class="game-list">
+        <div class="game-card">
+            <i class="fas fa-times fa-5x game-icon"></i>
+            <button class="play-btn" onclick="playGame('game.html')">Play Tic Tac Toe</button>
+        </div>
+        <div class="game-card">
+            <i class="fas fa-chess fa-5x game-icon"></i>
+            <button class="play-btn" onclick="playGame('chess.html')">Play Chess</button>
+        </div>
+        <div class="game-card">
+            <i class="fas fa-dove fa-5x game-icon"></i>
+            <button class="play-btn" onclick="comingSoon()">Play Flappy Bird</button>
+        </div>
+        <!-- Add more games here -->
+    </div>
+
+    <!-- Coming Soon Overlay -->
+    <div id="coming-soon-overlay" class="coming-soon-overlay">
+        <h2>Coming Soon</h2>
+        <button class="close-overlay" onclick="closeOverlay()">✖️</button>
+    </div>
+
+    <script>
+        function playGame(gameUrl) {
+            window.location.href = gameUrl;
+        }
+
+        function comingSoon() {
+            document.getElementById('coming-soon-overlay').style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            document.getElementById('coming-soon-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

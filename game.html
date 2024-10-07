@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="back_button" onclick="goBack()" style="position: absolute; top: 20px; left: 20px; background-color: transparent; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">⬅️</button>
+    
+    <div class="turn_container">
+        <h3>Turn For</h3>
+        <div class="turn_box align">X</div>
+        <div class="turn_box align">O</div>
+        <div class="bg"></div>
+    </div>
+
+    <div class="main_grid">
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+    </div>
+    <h1 id="results"></h1>
+    <button id="play_again">Play Again</button>
+
+    <!-- Settings Icon -->
+    <div class="settings">
+        <span id="settingsIcon" onclick="toggleSettings()">⚙️</span>
+    </div>
+
+    <!-- Vibration Settings Overlay -->
+    <div id="overlay" style="display: none;">
+        <div class="overlay-content">
+            <button id="closeOverlay" onclick="toggleOverlay()">✖️</button>
+            <p>Vibration: <span id="vibrationStatus" onclick="toggleVibration()" style="cursor: pointer;">📳</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> 
+</body>
+</html>
